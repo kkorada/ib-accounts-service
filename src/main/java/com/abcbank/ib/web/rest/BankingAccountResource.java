@@ -116,6 +116,12 @@ public class BankingAccountResource {
         return bankingAccounts;
     }
 
+    @GetMapping("/version")
+    public String getBankingAccountByCustomer() {
+        log.debug("REST request to get version of api");
+        return "v1";
+    }
+
     /**
      * {@code DELETE  /banking-accounts/:id} : delete the "id" bankingAccount.
      *
